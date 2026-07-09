@@ -1,0 +1,42 @@
+name: 盘中盯盘（30/60分低位信号）
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_minutes:
+        description: "连跑分钟数（留空=340，约覆盖全交易时段；调试可填小值）"
+        type: string
+        default: ""
+  schedule:
+    # 北京时间约 09:25（开盘前几分钟）启动，UTC 01:25，周一至周五。
+    - cron: "25 1 * * 1-5"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: astock-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350        # 单任务最长 6h；连跑约 5.7h 覆盖 9:30-15:00
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 盯盘（每5分钟扫一轮，命中发邮件）
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          RUN_MINUTES: ${{ inputs.run_minutes != '' && inputs.run_minutes || '340' }}
+          INTERVAL_SEC: "300"
+        run: python monitor.py --mode watch

@@ -1,0 +1,51 @@
+name: 盘后预筛（日线选池）
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 北京时间约 15:15（收盘后），UTC 07:15，周一至周五。cron 为尽力而为，晚几分钟无碍。
+    - cron: "15 7 * * 1-5"
+
+permissions:
+  contents: write        # 需要把 watchlist.json 提交回仓库
+
+concurrency:
+  group: astock-screen
+  cancel-in-progress: false
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 缓存日线（增量复用）
+        uses: actions/cache@v4
+        with:
+          path: cache/daily
+          key: daily-${{ github.run_id }}
+          restore-keys: |
+            daily-
+
+      - name: 预筛生成 watchlist
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python monitor.py --mode screen
+
+      - name: 提交 watchlist.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add watchlist.json
+          git commit -m "watchlist $(date -u +%F)" || echo "无变化，跳过提交"
+          git push || echo "push 失败（可能无变化）"
