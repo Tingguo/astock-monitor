@@ -29,24 +29,30 @@ CACHE_DIR = Path(__file__).resolve().parent / "cache"
 (CACHE_DIR / "daily").mkdir(parents=True, exist_ok=True)
 
 
-def _em_get(hosts: list[str], path: str, params: dict) -> dict:
-    """多镜像主机轮换 GET，返回 json。优先用上次成功主机。"""
+def _em_get(hosts: list[str], path: str, params: dict, rounds: int = 3) -> dict:
+    """
+    多镜像主机轮换 GET，返回 json。优先用上次成功主机。
+    东财数据中心 IP（GitHub runner）连接常间歇性被 RemoteDisconnected/502，
+    故对全部镜像做 rounds 轮重试、轮间退避，扛住抖动。
+    """
     key = id(hosts)
     order = ([_good[key]] if _good.get(key) else []) + [h for h in hosts if h != _good.get(key)]
     sess = requests.Session()
     sess.headers.update({"User-Agent": _UA})
     last = None
-    for h in order:
-        try:
-            r = sess.get(f"https://{h}{path}", params=params, timeout=20)
-            r.raise_for_status()
-            j = r.json()
-            if j and j.get("data") is not None:
-                _good[key] = h
-                return j
-            last = RuntimeError("data 为空")
-        except Exception as e:
-            last = e
+    for rnd in range(rounds):
+        for h in order:
+            try:
+                r = sess.get(f"https://{h}{path}", params=params, timeout=20)
+                r.raise_for_status()
+                j = r.json()
+                if j and j.get("data") is not None:
+                    _good[key] = h
+                    return j
+                last = RuntimeError("data 为空")
+            except Exception as e:
+                last = e
+        time.sleep(1.5 * (rnd + 1))     # 轮间退避
     raise last or RuntimeError("所有镜像主机不可用")
 
 
@@ -60,7 +66,11 @@ def snapshot() -> pd.DataFrame:
             "fs": "m:0 t:6,m:0 t:80,m:1 t:2,m:1 t:23", "fields": ",".join(_SPOT_FIELDS)}
 
     def page(pn):
-        data = _em_get(_CLIST_HOSTS, "/api/qt/clist/get", {**base, "pn": pn, "pz": 100}).get("data") or {}
+        # 单页失败（多轮重试后仍不行）→ 返回空，不拖垮整表（宁可少几页也别全崩）
+        try:
+            data = _em_get(_CLIST_HOSTS, "/api/qt/clist/get", {**base, "pn": pn, "pz": 100}).get("data") or {}
+        except Exception:
+            return 0, []
         diff = data.get("diff") or []
         return data.get("total", 0), (list(diff.values()) if isinstance(diff, dict) else diff)
 
@@ -68,7 +78,8 @@ def snapshot() -> pd.DataFrame:
     rows = list(first)
     n_pages = math.ceil((total or len(rows)) / 100)
     if n_pages > 1:
-        with ThreadPoolExecutor(max_workers=config.MAX_WORKERS) as ex:
+        # 低并发，避免突发被东财丢连接（数据中心 IP 尤甚）
+        with ThreadPoolExecutor(max_workers=config.SNAPSHOT_WORKERS) as ex:
             for _, diff in ex.map(lambda pn: page(pn), range(2, n_pages + 1)):
                 rows.extend(diff)
     df = pd.DataFrame(rows).rename(columns=_SPOT_FIELDS)

@@ -27,7 +27,8 @@ S4_M60_NEED = 20
 # ── 盘中盯盘节奏 ──
 INTERVAL_SEC = int(os.environ.get("INTERVAL_SEC", "300"))    # 每轮间隔（秒）
 RUN_MINUTES = int(os.environ.get("RUN_MINUTES", "340"))      # 单任务连跑分钟数（覆盖交易时段）
-MAX_WORKERS = int(os.environ.get("MAX_WORKERS", "12"))
+MAX_WORKERS = int(os.environ.get("MAX_WORKERS", "10"))          # 日线下载并发
+SNAPSHOT_WORKERS = int(os.environ.get("SNAPSHOT_WORKERS", "4"))  # 快照分页并发（低，避免东财丢连接）
 
 # ── 数据起点 ──
 DATA_START = "20180101"
