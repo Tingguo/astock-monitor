@@ -1,6 +1,205 @@
 {
-  "date": "",
-  "generated_at": "初始占位；首次 screen 运行后由盘后预筛任务生成并提交",
-  "count": 0,
-  "stocks": []
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12 10:14:32 CST",
+  "count": 18,
+  "stocks": [
+    {
+      "code": "603698",
+      "ma5": 40.81,
+      "ma10": 40.56,
+      "ma20": 37.61,
+      "close": 44.09,
+      "n_limit": 3,
+      "days_since_limit": 0,
+      "fund_net_yi": 1.1,
+      "name": "航天工程"
+    },
+    {
+      "code": "002317",
+      "ma5": 27.64,
+      "ma10": 26.82,
+      "ma20": 24.66,
+      "close": 29.54,
+      "n_limit": 3,
+      "days_since_limit": 0,
+      "fund_net_yi": 1.02,
+      "name": "众生药业"
+    },
+    {
+      "code": "002396",
+      "ma5": 27.54,
+      "ma10": 24.01,
+      "ma20": 21.48,
+      "close": 27.47,
+      "n_limit": 5,
+      "days_since_limit": 2,
+      "fund_net_yi": 5.6,
+      "name": "星网锐捷"
+    },
+    {
+      "code": "600350",
+      "ma5": 12.38,
+      "ma10": 11.92,
+      "ma20": 11.25,
+      "close": 11.87,
+      "n_limit": 1,
+      "days_since_limit": 2,
+      "fund_net_yi": 0.45,
+      "name": "山东高速"
+    },
+    {
+      "code": "600246",
+      "ma5": 19.12,
+      "ma10": 18.27,
+      "ma20": 18.14,
+      "close": 19.8,
+      "n_limit": 3,
+      "days_since_limit": 3,
+      "fund_net_yi": 6.72,
+      "name": "万通发展"
+    },
+    {
+      "code": "603065",
+      "ma5": 20.2,
+      "ma10": 19.81,
+      "ma20": 18.27,
+      "close": 19.45,
+      "n_limit": 4,
+      "days_since_limit": 3,
+      "fund_net_yi": 0.92,
+      "name": "宿迁联盛"
+    },
+    {
+      "code": "000066",
+      "ma5": 19.21,
+      "ma10": 18.68,
+      "ma20": 18.25,
+      "close": 19.45,
+      "n_limit": 1,
+      "days_since_limit": 4,
+      "fund_net_yi": 0.63,
+      "name": "中国长城"
+    },
+    {
+      "code": "603268",
+      "ma5": 161.63,
+      "ma10": 152.3,
+      "ma20": 150.04,
+      "close": 159.68,
+      "n_limit": 1,
+      "days_since_limit": 4,
+      "fund_net_yi": 0.59,
+      "name": "松发股份"
+    },
+    {
+      "code": "002457",
+      "ma5": 15.07,
+      "ma10": 13.84,
+      "ma20": 13.44,
+      "close": 15.76,
+      "n_limit": 2,
+      "days_since_limit": 4,
+      "fund_net_yi": 0.43,
+      "name": "青龙管业"
+    },
+    {
+      "code": "300684",
+      "ma5": 69.47,
+      "ma10": 64.27,
+      "ma20": 61.28,
+      "close": 69.61,
+      "n_limit": 1,
+      "days_since_limit": 4,
+      "fund_net_yi": 0.03,
+      "name": "中石科技"
+    },
+    {
+      "code": "002747",
+      "ma5": 44.69,
+      "ma10": 42.12,
+      "ma20": 38.74,
+      "close": 42.78,
+      "n_limit": 4,
+      "days_since_limit": 5,
+      "fund_net_yi": 14.23,
+      "name": "埃斯顿"
+    },
+    {
+      "code": "002979",
+      "ma5": 67.57,
+      "ma10": 63.59,
+      "ma20": 58.33,
+      "close": 66.01,
+      "n_limit": 2,
+      "days_since_limit": 5,
+      "fund_net_yi": 1.34,
+      "name": "雷赛智能"
+    },
+    {
+      "code": "300873",
+      "ma5": 29.77,
+      "ma10": 28.24,
+      "ma20": 23.12,
+      "close": 29.7,
+      "n_limit": 2,
+      "days_since_limit": 7,
+      "fund_net_yi": 0.45,
+      "name": "海晨股份"
+    },
+    {
+      "code": "603019",
+      "ma5": 99.54,
+      "ma10": 99.21,
+      "ma20": 94.05,
+      "close": 107.5,
+      "n_limit": 2,
+      "days_since_limit": 8,
+      "fund_net_yi": 41.78,
+      "name": "中科曙光"
+    },
+    {
+      "code": "605208",
+      "ma5": 17.79,
+      "ma10": 16.93,
+      "ma20": 16.3,
+      "close": 18.86,
+      "n_limit": 1,
+      "days_since_limit": 8,
+      "fund_net_yi": 0.01,
+      "name": "永茂泰"
+    },
+    {
+      "code": "002422",
+      "ma5": 44.02,
+      "ma10": 43.24,
+      "ma20": 39.92,
+      "close": 44.07,
+      "n_limit": 1,
+      "days_since_limit": 9,
+      "fund_net_yi": 0.78,
+      "name": "科伦药业"
+    },
+    {
+      "code": "002965",
+      "ma5": 52.29,
+      "ma10": 51.66,
+      "ma20": 47.71,
+      "close": 51.41,
+      "n_limit": 2,
+      "days_since_limit": 10,
+      "fund_net_yi": 1.15,
+      "name": "祥鑫科技"
+    },
+    {
+      "code": "003033",
+      "ma5": 67.89,
+      "ma10": 62.65,
+      "ma20": 57.2,
+      "close": 70.21,
+      "n_limit": 1,
+      "days_since_limit": 10,
+      "fund_net_yi": 0.4,
+      "name": "征和工业"
+    }
+  ]
 }
