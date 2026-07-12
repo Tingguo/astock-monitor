@@ -96,37 +96,37 @@ def _secid(code: str) -> str:
 
 
 def load_daily(code: str, use_cache: bool = True) -> pd.DataFrame | None:
-    """日线（前复权），列 Open/High/Low/Close/Volume/Turnover，DatetimeIndex。缓存增量。"""
+    """
+    日线（前复权），列 Open/High/Low/Close/Volume/Turnover，DatetimeIndex。
+    数据源：新浪 stock_zh_a_daily（一次调用返回全历史，从 GitHub 机房稳定可用；
+    东财 kline 从境外机房抖动严重、逐只重试太慢，故弃用）。当日缓存复用。
+    """
+    import akshare as ak
     cache = CACHE_DIR / "daily" / f"{code}.csv"
-    cached = None
     if use_cache and cache.exists():
         try:
-            cached = pd.read_csv(cache, index_col=0, parse_dates=True)
+            c = pd.read_csv(cache, index_col=0, parse_dates=True)
+            today = dt.date.today().strftime("%Y-%m-%d")
+            if len(c) >= 60 and c.index[-1].strftime("%Y-%m-%d") >= today:
+                return c            # 今日已缓存，直接用
         except Exception:
-            cached = None
-    # 首取只要约18个月历史（够 MA20/涨停/回踩判断，远比全量快）
-    beg = (dt.date.today() - dt.timedelta(days=550)).strftime("%Y%m%d")
-    if cached is not None and len(cached):
-        beg = cached.index[-1].strftime("%Y%m%d")     # 从最后一天起补
-    params = {"fields1": "f1,f2,f3,f4,f5,f6",
-              "fields2": "f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61",
-              "ut": "7eea3edcaed734bea9cbfc24409ed989", "klt": "101", "fqt": "1",
-              "secid": _secid(code), "beg": beg, "end": "20500000"}
+            pass
     for attempt in range(3):
         try:
-            data = _em_get(_HIST_HOSTS, "/api/qt/stock/kline/get", params).get("data") or {}
-            kl = data.get("klines") or []
-            if not kl:
-                return cached if cached is not None and len(cached) >= 60 else None
-            rows = [x.split(",") for x in kl]
-            df = pd.DataFrame(rows, columns=["Date", "Open", "Close", "High", "Low",
-                                             "Volume", "Amount", "振幅", "涨跌幅", "涨跌额", "Turnover"])
+            raw = ak.stock_zh_a_daily(symbol=_sina_symbol(code), adjust="qfq")
+            if raw is None or raw.empty:
+                return None
+            df = raw.rename(columns={"date": "Date", "open": "Open", "high": "High",
+                                     "low": "Low", "close": "Close", "volume": "Volume",
+                                     "turnover": "Turnover"})
             df["Date"] = pd.to_datetime(df["Date"])
             for c in ["Open", "High", "Low", "Close", "Volume", "Turnover"]:
-                df[c] = pd.to_numeric(df[c], errors="coerce")
-            df = df.set_index("Date")[["Open", "High", "Low", "Close", "Volume", "Turnover"]].sort_index()
-            if cached is not None and len(cached):
-                df = pd.concat([cached[cached.index < df.index[0]], df]).sort_index()
+                if c in df.columns:
+                    df[c] = pd.to_numeric(df[c], errors="coerce")
+            keep = [c for c in ["Open", "High", "Low", "Close", "Volume", "Turnover"] if c in df.columns]
+            df = df.set_index("Date")[keep].sort_index().tail(400)   # 只留近~18个月
+            if "Turnover" in df.columns:
+                df["Turnover"] = df["Turnover"] * 100                # 新浪换手率是小数,转百分比
             try:
                 df.to_csv(cache, encoding="utf-8-sig")
             except Exception:
@@ -134,8 +134,8 @@ def load_daily(code: str, use_cache: bool = True) -> pd.DataFrame | None:
             return df if len(df) >= 60 else None
         except Exception:
             if attempt == 2:
-                return cached if cached is not None and len(cached) >= 60 else None
-            time.sleep(0.6 * (attempt + 1))
+                return None
+            time.sleep(0.8 * (attempt + 1))
     return None
 
 
