@@ -68,9 +68,15 @@ def build_watchlist(log=print) -> list[dict]:
         return True
 
     uni = spot[spot.apply(base_ok, axis=1)]
+    # 用快照的「60日涨幅」预筛出强势股，把逐只下载日线的数量从数千砍到几百（云端提速关键）
+    if "60日涨幅" in uni.columns:
+        strong = uni[pd.to_numeric(uni["60日涨幅"], errors="coerce") >= config.PRESCREEN_GAIN60_MIN * 100]
+        strong = strong.sort_values("60日涨幅", ascending=False).head(config.PRESCREEN_MAX)
+        log(f"[预筛] 基础过滤 {len(uni)} 只 → 60日涨幅≥{config.PRESCREEN_GAIN60_MIN*100:.0f}% 强势 {len(strong)} 只")
+        uni = strong
     name_by = dict(zip(uni["代码"], uni["名称"]))
     codes = list(uni["代码"])
-    log(f"[预筛] 基础过滤后 {len(codes)} 只，取资金流 + 逐只日线 ...")
+    log(f"[预筛] 待下载日线 {len(codes)} 只，取资金流 + 逐只日线 ...")
     flows = datafeeds.fundflow(config.S4_FUND_INDICATOR)
 
     watch = []

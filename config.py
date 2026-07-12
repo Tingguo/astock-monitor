@@ -8,6 +8,10 @@ FLOAT_MKTCAP_MIN = 50e8       # 流通市值下限（元）
 MIN_PRICE = 2.0
 MIN_LISTED_DAYS = 120
 
+# ── 云端提速：下载日线前先用快照「60日涨幅」砍池子（强势股才可能有涨停）──
+PRESCREEN_GAIN60_MIN = 0.20   # 近60日涨幅 ≥ 20% 才进入日线下载（大幅缩小下载量）
+PRESCREEN_MAX = 600           # 最多取涨幅前 N 只，控制下载耗时
+
 # ── 策略四·日线门槛（预筛用）──
 S4_STRONG_LB = 20             # 近 N 日内有涨停（强势基因）
 S4_LIMIT_MIN = 1

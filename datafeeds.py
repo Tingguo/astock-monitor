@@ -58,7 +58,7 @@ def _em_get(hosts: list[str], path: str, params: dict, rounds: int = 3) -> dict:
 
 # ─────────────── 全市场快照 ───────────────
 _SPOT_FIELDS = {"f12": "代码", "f14": "名称", "f2": "最新价", "f3": "涨跌幅",
-                "f8": "换手率", "f20": "总市值", "f21": "流通市值"}
+                "f8": "换手率", "f20": "总市值", "f21": "流通市值", "f24": "60日涨幅"}
 
 
 def snapshot() -> pd.DataFrame:
@@ -84,7 +84,7 @@ def snapshot() -> pd.DataFrame:
                 rows.extend(diff)
     df = pd.DataFrame(rows).rename(columns=_SPOT_FIELDS)
     df["代码"] = df["代码"].astype(str).str.zfill(6)
-    for c in ["最新价", "涨跌幅", "换手率", "总市值", "流通市值"]:
+    for c in ["最新价", "涨跌幅", "换手率", "总市值", "流通市值", "60日涨幅"]:
         if c in df.columns:
             df[c] = pd.to_numeric(df[c], errors="coerce")
     return df
