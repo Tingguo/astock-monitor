@@ -1,39 +1,28 @@
 {
-  "date": "2026-07-31",
-  "generated_at": "2026-07-31 18:02:36 CST",
-  "count": 3,
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03 18:53:26 CST",
+  "count": 2,
   "stocks": [
     {
-      "code": "001258",
-      "ma5": 12.71,
-      "ma10": 11.88,
-      "ma20": 9.4,
-      "close": 12.34,
-      "n_limit": 7,
-      "days_since_limit": 4,
-      "fund_net_yi": 3.56,
-      "name": "立新能源"
-    },
-    {
       "code": "300779",
-      "ma5": 76.97,
-      "ma10": 71.61,
-      "ma20": 63.56,
-      "close": 79.38,
+      "ma5": 77.57,
+      "ma10": 74.17,
+      "ma20": 64.72,
+      "close": 82.43,
       "n_limit": 1,
-      "days_since_limit": 7,
-      "fund_net_yi": 0.49,
+      "days_since_limit": 8,
+      "fund_net_yi": 2.07,
       "name": "惠城环保"
     },
     {
       "code": "600428",
-      "ma5": 10.92,
-      "ma10": 10.79,
-      "ma20": 9.97,
-      "close": 11.31,
+      "ma5": 11.09,
+      "ma10": 10.84,
+      "ma20": 10.12,
+      "close": 11.35,
       "n_limit": 1,
-      "days_since_limit": 15,
-      "fund_net_yi": 1.08,
+      "days_since_limit": 16,
+      "fund_net_yi": 0.29,
       "name": "中远海特"
     }
   ]
