@@ -1,6 +1,216 @@
 {
-  "date": "2026-09-21",
-  "generated_at": "2026-09-21 22:26:19 CST",
-  "count": 0,
-  "stocks": []
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22 20:45:17 CST",
+  "count": 19,
+  "stocks": [
+    {
+      "code": "002301",
+      "ma5": 8.2,
+      "ma10": 8.04,
+      "ma20": 7.96,
+      "close": 9.27,
+      "n_limit": 1,
+      "days_since_limit": 0,
+      "fund_net_yi": 0.38,
+      "name": "齐心集团"
+    },
+    {
+      "code": "000002",
+      "ma5": 3.37,
+      "ma10": 3.23,
+      "ma20": 3.2,
+      "close": 3.81,
+      "n_limit": 2,
+      "days_since_limit": 1,
+      "fund_net_yi": 3.16,
+      "name": "万  科Ａ"
+    },
+    {
+      "code": "600325",
+      "ma5": 2.55,
+      "ma10": 2.51,
+      "ma20": 2.5,
+      "close": 2.82,
+      "n_limit": 1,
+      "days_since_limit": 1,
+      "fund_net_yi": 1.39,
+      "name": "华发股份"
+    },
+    {
+      "code": "603175",
+      "ma5": 105.31,
+      "ma10": 100.91,
+      "ma20": 95.88,
+      "close": 113.08,
+      "n_limit": 1,
+      "days_since_limit": 1,
+      "fund_net_yi": 0.14,
+      "name": "超颖电子"
+    },
+    {
+      "code": "600640",
+      "ma5": 11.91,
+      "ma10": 11.38,
+      "ma20": 11.22,
+      "close": 13.41,
+      "n_limit": 1,
+      "days_since_limit": 2,
+      "fund_net_yi": 1.26,
+      "name": "国脉文化"
+    },
+    {
+      "code": "600792",
+      "ma5": 5.34,
+      "ma10": 5.24,
+      "ma20": 4.67,
+      "close": 5.75,
+      "n_limit": 5,
+      "days_since_limit": 3,
+      "fund_net_yi": 0.39,
+      "name": "云煤能源"
+    },
+    {
+      "code": "300741",
+      "ma5": 26.09,
+      "ma10": 23.06,
+      "ma20": 19.36,
+      "close": 29.49,
+      "n_limit": 1,
+      "days_since_limit": 3,
+      "fund_net_yi": 0.06,
+      "name": "华宝股份"
+    },
+    {
+      "code": "002913",
+      "ma5": 84.39,
+      "ma10": 78.87,
+      "ma20": 70.27,
+      "close": 88.12,
+      "n_limit": 2,
+      "days_since_limit": 4,
+      "fund_net_yi": 3.29,
+      "name": "奥士康"
+    },
+    {
+      "code": "000993",
+      "ma5": 19.48,
+      "ma10": 16.74,
+      "ma20": 13.47,
+      "close": 20.91,
+      "n_limit": 6,
+      "days_since_limit": 4,
+      "fund_net_yi": 0.94,
+      "name": "闽东电力"
+    },
+    {
+      "code": "002383",
+      "ma5": 8.06,
+      "ma10": 7.95,
+      "ma20": 7.59,
+      "close": 8.21,
+      "n_limit": 2,
+      "days_since_limit": 4,
+      "fund_net_yi": 0.17,
+      "name": "合众思壮"
+    },
+    {
+      "code": "605507",
+      "ma5": 17.91,
+      "ma10": 17.08,
+      "ma20": 16.24,
+      "close": 18.26,
+      "n_limit": 1,
+      "days_since_limit": 5,
+      "fund_net_yi": 0.58,
+      "name": "国邦医药"
+    },
+    {
+      "code": "603657",
+      "ma5": 35.72,
+      "ma10": 32.72,
+      "ma20": 28.92,
+      "close": 37.3,
+      "n_limit": 1,
+      "days_since_limit": 6,
+      "fund_net_yi": 0.33,
+      "name": "春光科技"
+    },
+    {
+      "code": "603336",
+      "ma5": 10.4,
+      "ma10": 10.13,
+      "ma20": 9.77,
+      "close": 10.88,
+      "n_limit": 1,
+      "days_since_limit": 7,
+      "fund_net_yi": 0.58,
+      "name": "宏辉果蔬"
+    },
+    {
+      "code": "601199",
+      "ma5": 6.61,
+      "ma10": 6.47,
+      "ma20": 6.25,
+      "close": 6.68,
+      "n_limit": 1,
+      "days_since_limit": 7,
+      "fund_net_yi": 0.17,
+      "name": "江南水务"
+    },
+    {
+      "code": "002264",
+      "ma5": 7.5,
+      "ma10": 7.36,
+      "ma20": 7.12,
+      "close": 7.97,
+      "n_limit": 1,
+      "days_since_limit": 10,
+      "fund_net_yi": 1.66,
+      "name": "新 华 都"
+    },
+    {
+      "code": "601595",
+      "ma5": 23.83,
+      "ma10": 23.37,
+      "ma20": 20.97,
+      "close": 24.64,
+      "n_limit": 3,
+      "days_since_limit": 10,
+      "fund_net_yi": 0.57,
+      "name": "上海电影"
+    },
+    {
+      "code": "603355",
+      "ma5": 30.73,
+      "ma10": 30.33,
+      "ma20": 29.38,
+      "close": 32.44,
+      "n_limit": 1,
+      "days_since_limit": 11,
+      "fund_net_yi": 0.04,
+      "name": "莱克电气"
+    },
+    {
+      "code": "002827",
+      "ma5": 69.13,
+      "ma10": 65.69,
+      "ma20": 63.54,
+      "close": 74.28,
+      "n_limit": 1,
+      "days_since_limit": 12,
+      "fund_net_yi": 0.71,
+      "name": "高争民爆"
+    },
+    {
+      "code": "603236",
+      "ma5": 73.16,
+      "ma10": 67.59,
+      "ma20": 64.04,
+      "close": 76.15,
+      "n_limit": 1,
+      "days_since_limit": 16,
+      "fund_net_yi": 2.48,
+      "name": "移远通信"
+    }
+  ]
 }
