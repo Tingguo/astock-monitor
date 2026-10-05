@@ -1,73 +1,73 @@
 {
-  "date": "2026-09-24",
-  "generated_at": "2026-09-24 20:50:36 CST",
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06 00:12:47 CST",
   "count": 6,
   "stocks": [
     {
-      "code": "002849",
-      "ma5": 21.93,
-      "ma10": 19.82,
-      "ma20": 19.01,
-      "close": 24.75,
-      "n_limit": 2,
-      "days_since_limit": 1,
-      "fund_net_yi": 0.85,
-      "name": "威星智能"
+      "code": "600663",
+      "ma5": 9.18,
+      "ma10": 9.05,
+      "ma20": 9.04,
+      "close": 10.11,
+      "n_limit": 1,
+      "days_since_limit": 0,
+      "fund_net_yi": 0.04,
+      "name": "陆家嘴"
     },
     {
-      "code": "002246",
-      "ma5": 25.81,
-      "ma10": 24.31,
-      "ma20": 22.94,
-      "close": 26.0,
+      "code": "000002",
+      "ma5": 3.95,
+      "ma10": 3.66,
+      "ma20": 3.4,
+      "close": 4.26,
+      "n_limit": 3,
+      "days_since_limit": 1,
+      "fund_net_yi": 12.73,
+      "name": "万  科Ａ"
+    },
+    {
+      "code": "002244",
+      "ma5": 9.02,
+      "ma10": 8.66,
+      "ma20": 8.52,
+      "close": 10.14,
+      "n_limit": 1,
+      "days_since_limit": 1,
+      "fund_net_yi": 3.38,
+      "name": "滨江集团"
+    },
+    {
+      "code": "601811",
+      "ma5": 19.77,
+      "ma10": 16.96,
+      "ma20": 14.33,
+      "close": 21.12,
+      "n_limit": 6,
+      "days_since_limit": 1,
+      "fund_net_yi": 2.08,
+      "name": "新华文轩"
+    },
+    {
+      "code": "000498",
+      "ma5": 5.61,
+      "ma10": 5.31,
+      "ma20": 5.12,
+      "close": 5.87,
       "n_limit": 1,
       "days_since_limit": 3,
       "fund_net_yi": 0.75,
-      "name": "北化股份"
+      "name": "山东路桥"
     },
     {
-      "code": "601579",
-      "ma5": 36.24,
-      "ma10": 31.21,
-      "ma20": 26.73,
-      "close": 38.04,
-      "n_limit": 6,
-      "days_since_limit": 3,
-      "fund_net_yi": 0.04,
-      "name": "会稽山"
-    },
-    {
-      "code": "605577",
-      "ma5": 16.48,
-      "ma10": 16.16,
-      "ma20": 14.12,
-      "close": 16.52,
-      "n_limit": 7,
-      "days_since_limit": 5,
-      "fund_net_yi": 0.12,
-      "name": "龙版传媒"
-    },
-    {
-      "code": "000993",
-      "ma5": 19.82,
-      "ma10": 18.15,
-      "ma20": 14.39,
-      "close": 19.32,
-      "n_limit": 6,
-      "days_since_limit": 6,
-      "fund_net_yi": 7.86,
-      "name": "闽东电力"
-    },
-    {
-      "code": "002093",
-      "ma5": 7.59,
-      "ma10": 7.54,
-      "ma20": 7.33,
-      "close": 7.77,
+      "code": "600383",
+      "ma5": 2.52,
+      "ma10": 2.41,
+      "ma20": 2.35,
+      "close": 2.74,
       "n_limit": 1,
-      "days_since_limit": 12,
-      "fund_net_yi": 0.08,
-      "name": "国脉科技"
+      "days_since_limit": 6,
+      "fund_net_yi": 2.95,
+      "name": "金地集团"
     }
   ]
 }
