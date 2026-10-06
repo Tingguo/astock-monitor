@@ -1,7 +1,7 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06 00:12:47 CST",
-  "count": 6,
+  "generated_at": "2026-10-06 22:23:25 CST",
+  "count": 3,
   "stocks": [
     {
       "code": "600663",
@@ -15,17 +15,6 @@
       "name": "陆家嘴"
     },
     {
-      "code": "000002",
-      "ma5": 3.95,
-      "ma10": 3.66,
-      "ma20": 3.4,
-      "close": 4.26,
-      "n_limit": 3,
-      "days_since_limit": 1,
-      "fund_net_yi": 12.73,
-      "name": "万  科Ａ"
-    },
-    {
       "code": "002244",
       "ma5": 9.02,
       "ma10": 8.66,
@@ -35,28 +24,6 @@
       "days_since_limit": 1,
       "fund_net_yi": 3.38,
       "name": "滨江集团"
-    },
-    {
-      "code": "601811",
-      "ma5": 19.77,
-      "ma10": 16.96,
-      "ma20": 14.33,
-      "close": 21.12,
-      "n_limit": 6,
-      "days_since_limit": 1,
-      "fund_net_yi": 2.08,
-      "name": "新华文轩"
-    },
-    {
-      "code": "000498",
-      "ma5": 5.61,
-      "ma10": 5.31,
-      "ma20": 5.12,
-      "close": 5.87,
-      "n_limit": 1,
-      "days_since_limit": 3,
-      "fund_net_yi": 0.75,
-      "name": "山东路桥"
     },
     {
       "code": "600383",
