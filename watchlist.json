@@ -1,73 +1,51 @@
 {
-  "date": "2026-10-15",
-  "generated_at": "2026-10-15 20:46:55 CST",
-  "count": 6,
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16 20:32:54 CST",
+  "count": 4,
   "stocks": [
     {
-      "code": "600812",
-      "ma5": 6.23,
-      "ma10": 5.62,
-      "ma20": 5.23,
-      "close": 6.57,
-      "n_limit": 5,
+      "code": "601811",
+      "ma5": 24.22,
+      "ma10": 22.1,
+      "ma20": 18.3,
+      "close": 28.14,
+      "n_limit": 11,
       "days_since_limit": 0,
-      "fund_net_yi": 3.67,
-      "name": "华北制药"
+      "fund_net_yi": 0.0,
+      "name": "新华文轩"
     },
     {
-      "code": "603200",
-      "ma5": 51.86,
-      "ma10": 46.92,
-      "ma20": 42.9,
-      "close": 53.35,
-      "n_limit": 6,
-      "days_since_limit": 0,
-      "fund_net_yi": 0.37,
-      "name": "上海洗霸"
-    },
-    {
-      "code": "002639",
-      "ma5": 14.48,
-      "ma10": 14.24,
-      "ma20": 13.94,
-      "close": 15.37,
+      "code": "300111",
+      "ma5": 3.44,
+      "ma10": 3.25,
+      "ma20": 3.13,
+      "close": 4.03,
       "n_limit": 1,
-      "days_since_limit": 2,
-      "fund_net_yi": 4.24,
-      "name": "雪人集团"
+      "days_since_limit": 1,
+      "fund_net_yi": 0.51,
+      "name": "向日葵"
     },
     {
-      "code": "601595",
-      "ma5": 27.44,
-      "ma10": 25.16,
-      "ma20": 24.32,
-      "close": 28.6,
-      "n_limit": 2,
+      "code": "600316",
+      "ma5": 34.53,
+      "ma10": 33.59,
+      "ma20": 33.35,
+      "close": 37.66,
+      "n_limit": 1,
       "days_since_limit": 3,
-      "fund_net_yi": 1.6,
-      "name": "上海电影"
+      "fund_net_yi": 2.97,
+      "name": "洪都航空"
     },
     {
-      "code": "601519",
-      "ma5": 9.4,
-      "ma10": 8.97,
-      "ma20": 8.69,
-      "close": 9.65,
-      "n_limit": 2,
+      "code": "002242",
+      "ma5": 17.42,
+      "ma10": 15.02,
+      "ma20": 12.26,
+      "close": 17.79,
+      "n_limit": 7,
       "days_since_limit": 4,
-      "fund_net_yi": 1.55,
-      "name": "大智慧"
-    },
-    {
-      "code": "002164",
-      "ma5": 13.54,
-      "ma10": 13.12,
-      "ma20": 11.91,
-      "close": 13.72,
-      "n_limit": 2,
-      "days_since_limit": 6,
-      "fund_net_yi": 0.47,
-      "name": "宁波东力"
+      "fund_net_yi": 1.13,
+      "name": "九阳股份"
     }
   ]
 }
