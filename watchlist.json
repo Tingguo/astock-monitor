@@ -1,51 +1,51 @@
 {
-  "date": "2026-10-16",
-  "generated_at": "2026-10-16 20:32:54 CST",
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20 20:51:31 CST",
   "count": 4,
   "stocks": [
     {
-      "code": "601811",
-      "ma5": 24.22,
-      "ma10": 22.1,
-      "ma20": 18.3,
-      "close": 28.14,
-      "n_limit": 11,
+      "code": "002164",
+      "ma5": 14.31,
+      "ma10": 13.8,
+      "ma20": 12.56,
+      "close": 16.16,
+      "n_limit": 4,
       "days_since_limit": 0,
-      "fund_net_yi": 0.0,
-      "name": "新华文轩"
+      "fund_net_yi": 1.47,
+      "name": "宁波东力"
     },
     {
-      "code": "300111",
-      "ma5": 3.44,
-      "ma10": 3.25,
-      "ma20": 3.13,
-      "close": 4.03,
-      "n_limit": 1,
-      "days_since_limit": 1,
-      "fund_net_yi": 0.51,
-      "name": "向日葵"
+      "code": "002640",
+      "ma5": 3.84,
+      "ma10": 3.8,
+      "ma20": 3.73,
+      "close": 3.93,
+      "n_limit": 3,
+      "days_since_limit": 5,
+      "fund_net_yi": 1.09,
+      "name": "跨境通"
     },
     {
-      "code": "600316",
-      "ma5": 34.53,
-      "ma10": 33.59,
-      "ma20": 33.35,
-      "close": 37.66,
-      "n_limit": 1,
-      "days_since_limit": 3,
-      "fund_net_yi": 2.97,
-      "name": "洪都航空"
+      "code": "601595",
+      "ma5": 28.3,
+      "ma10": 26.65,
+      "ma20": 25.05,
+      "close": 28.6,
+      "n_limit": 2,
+      "days_since_limit": 6,
+      "fund_net_yi": 0.24,
+      "name": "上海电影"
     },
     {
-      "code": "002242",
-      "ma5": 17.42,
-      "ma10": 15.02,
-      "ma20": 12.26,
-      "close": 17.79,
-      "n_limit": 7,
-      "days_since_limit": 4,
-      "fund_net_yi": 1.13,
-      "name": "九阳股份"
+      "code": "605287",
+      "ma5": 46.2,
+      "ma10": 43.51,
+      "ma20": 39.35,
+      "close": 47.89,
+      "n_limit": 3,
+      "days_since_limit": 6,
+      "fund_net_yi": 0.01,
+      "name": "德才股份"
     }
   ]
 }
