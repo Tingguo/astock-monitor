@@ -1,51 +1,29 @@
 {
-  "date": "2026-10-20",
-  "generated_at": "2026-10-20 20:51:31 CST",
-  "count": 4,
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21 21:04:21 CST",
+  "count": 2,
   "stocks": [
     {
-      "code": "002164",
-      "ma5": 14.31,
-      "ma10": 13.8,
-      "ma20": 12.56,
-      "close": 16.16,
-      "n_limit": 4,
-      "days_since_limit": 0,
-      "fund_net_yi": 1.47,
-      "name": "宁波东力"
+      "code": "600825",
+      "ma5": 15.18,
+      "ma10": 12.81,
+      "ma20": 9.32,
+      "close": 16.17,
+      "n_limit": 11,
+      "days_since_limit": 3,
+      "fund_net_yi": 2.99,
+      "name": "新华传媒"
     },
     {
-      "code": "002640",
-      "ma5": 3.84,
-      "ma10": 3.8,
-      "ma20": 3.73,
-      "close": 3.93,
-      "n_limit": 3,
-      "days_since_limit": 5,
-      "fund_net_yi": 1.09,
-      "name": "跨境通"
-    },
-    {
-      "code": "601595",
-      "ma5": 28.3,
-      "ma10": 26.65,
-      "ma20": 25.05,
-      "close": 28.6,
-      "n_limit": 2,
+      "code": "603466",
+      "ma5": 13.49,
+      "ma10": 13.04,
+      "ma20": 12.73,
+      "close": 14.47,
+      "n_limit": 1,
       "days_since_limit": 6,
-      "fund_net_yi": 0.24,
-      "name": "上海电影"
-    },
-    {
-      "code": "605287",
-      "ma5": 46.2,
-      "ma10": 43.51,
-      "ma20": 39.35,
-      "close": 47.89,
-      "n_limit": 3,
-      "days_since_limit": 6,
-      "fund_net_yi": 0.01,
-      "name": "德才股份"
+      "fund_net_yi": 0.21,
+      "name": "风语筑"
     }
   ]
 }
