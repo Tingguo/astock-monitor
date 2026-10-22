@@ -1,29 +1,29 @@
 {
-  "date": "2026-10-21",
-  "generated_at": "2026-10-21 21:04:21 CST",
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22 21:06:36 CST",
   "count": 2,
   "stocks": [
     {
-      "code": "600825",
-      "ma5": 15.18,
-      "ma10": 12.81,
-      "ma20": 9.32,
-      "close": 16.17,
-      "n_limit": 11,
-      "days_since_limit": 3,
-      "fund_net_yi": 2.99,
-      "name": "新华传媒"
+      "code": "300296",
+      "ma5": 5.09,
+      "ma10": 4.86,
+      "ma20": 4.84,
+      "close": 6.1,
+      "n_limit": 1,
+      "days_since_limit": 1,
+      "fund_net_yi": 3.74,
+      "name": "利亚德"
     },
     {
-      "code": "603466",
-      "ma5": 13.49,
-      "ma10": 13.04,
-      "ma20": 12.73,
-      "close": 14.47,
+      "code": "002626",
+      "ma5": 18.07,
+      "ma10": 16.8,
+      "ma20": 16.53,
+      "close": 18.46,
       "n_limit": 1,
-      "days_since_limit": 6,
-      "fund_net_yi": 0.21,
-      "name": "风语筑"
+      "days_since_limit": 3,
+      "fund_net_yi": 1.01,
+      "name": "金达威"
     }
   ]
 }
