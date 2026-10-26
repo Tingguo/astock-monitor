@@ -1,29 +1,95 @@
 {
-  "date": "2026-10-22",
-  "generated_at": "2026-10-22 21:06:36 CST",
-  "count": 2,
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26 22:24:56 CST",
+  "count": 8,
   "stocks": [
     {
-      "code": "300296",
-      "ma5": 5.09,
-      "ma10": 4.86,
-      "ma20": 4.84,
-      "close": 6.1,
+      "code": "300307",
+      "ma5": 8.02,
+      "ma10": 7.28,
+      "ma20": 7.16,
+      "close": 9.37,
       "n_limit": 1,
       "days_since_limit": 1,
-      "fund_net_yi": 3.74,
-      "name": "利亚德"
+      "fund_net_yi": 3.82,
+      "name": "慈星股份"
     },
     {
-      "code": "002626",
-      "ma5": 18.07,
-      "ma10": 16.8,
-      "ma20": 16.53,
-      "close": 18.46,
+      "code": "603171",
+      "ma5": 45.87,
+      "ma10": 42.95,
+      "ma20": 41.38,
+      "close": 48.87,
       "n_limit": 1,
-      "days_since_limit": 3,
-      "fund_net_yi": 1.01,
-      "name": "金达威"
+      "days_since_limit": 1,
+      "fund_net_yi": 1.11,
+      "name": "税友股份"
+    },
+    {
+      "code": "603286",
+      "ma5": 48.25,
+      "ma10": 44.3,
+      "ma20": 44.26,
+      "close": 53.45,
+      "n_limit": 2,
+      "days_since_limit": 1,
+      "fund_net_yi": 1.04,
+      "name": "日盈电子"
+    },
+    {
+      "code": "000156",
+      "ma5": 7.45,
+      "ma10": 7.39,
+      "ma20": 7.24,
+      "close": 8.0,
+      "n_limit": 1,
+      "days_since_limit": 1,
+      "fund_net_yi": 0.74,
+      "name": "华数传媒"
+    },
+    {
+      "code": "300369",
+      "ma5": 10.76,
+      "ma10": 10.65,
+      "ma20": 10.08,
+      "close": 11.85,
+      "n_limit": 2,
+      "days_since_limit": 1,
+      "fund_net_yi": 0.4,
+      "name": "绿盟科技"
+    },
+    {
+      "code": "600825",
+      "ma5": 15.32,
+      "ma10": 14.5,
+      "ma20": 10.81,
+      "close": 15.51,
+      "n_limit": 11,
+      "days_since_limit": 6,
+      "fund_net_yi": 0.04,
+      "name": "新华传媒"
+    },
+    {
+      "code": "600316",
+      "ma5": 36.97,
+      "ma10": 36.45,
+      "ma20": 34.65,
+      "close": 37.35,
+      "n_limit": 1,
+      "days_since_limit": 9,
+      "fund_net_yi": 0.82,
+      "name": "洪都航空"
+    },
+    {
+      "code": "601595",
+      "ma5": 28.17,
+      "ma10": 28.13,
+      "ma20": 26.0,
+      "close": 29.41,
+      "n_limit": 2,
+      "days_since_limit": 10,
+      "fund_net_yi": 0.23,
+      "name": "上海电影"
     }
   ]
 }
