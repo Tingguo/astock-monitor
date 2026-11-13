@@ -1,29 +1,73 @@
 {
   "date": "2026-11-13",
-  "generated_at": "2026-11-13 00:05:30 CST",
-  "count": 2,
+  "generated_at": "2026-11-13 23:29:05 CST",
+  "count": 6,
   "stocks": [
     {
-      "code": "002578",
-      "ma5": 5.74,
-      "ma10": 4.77,
-      "ma20": 4.17,
-      "close": 6.04,
-      "n_limit": 8,
+      "code": "300528",
+      "ma5": 15.78,
+      "ma10": 14.68,
+      "ma20": 13.49,
+      "close": 17.99,
+      "n_limit": 1,
+      "days_since_limit": 0,
+      "fund_net_yi": 0.54,
+      "name": "幸福蓝海"
+    },
+    {
+      "code": "002623",
+      "ma5": 23.15,
+      "ma10": 20.62,
+      "ma20": 19.43,
+      "close": 26.25,
+      "n_limit": 6,
+      "days_since_limit": 1,
+      "fund_net_yi": 0.01,
+      "name": "亚玛顿"
+    },
+    {
+      "code": "300473",
+      "ma5": 53.89,
+      "ma10": 46.17,
+      "ma20": 41.7,
+      "close": 56.72,
+      "n_limit": 1,
       "days_since_limit": 2,
-      "fund_net_yi": 1.37,
-      "name": "闽发铝业"
+      "fund_net_yi": 0.17,
+      "name": "德尔股份"
+    },
+    {
+      "code": "603666",
+      "ma5": 29.2,
+      "ma10": 27.36,
+      "ma20": 26.06,
+      "close": 31.5,
+      "n_limit": 1,
+      "days_since_limit": 3,
+      "fund_net_yi": 2.13,
+      "name": "亿嘉和"
     },
     {
       "code": "603389",
-      "ma5": 55.16,
-      "ma10": 50.42,
-      "ma20": 45.97,
-      "close": 59.15,
+      "ma5": 57.71,
+      "ma10": 52.12,
+      "ma20": 47.08,
+      "close": 61.37,
       "n_limit": 1,
-      "days_since_limit": 3,
-      "fund_net_yi": 1.07,
+      "days_since_limit": 4,
+      "fund_net_yi": 0.18,
       "name": "亚振家居"
+    },
+    {
+      "code": "002242",
+      "ma5": 26.49,
+      "ma10": 25.18,
+      "ma20": 23.36,
+      "close": 26.75,
+      "n_limit": 2,
+      "days_since_limit": 17,
+      "fund_net_yi": 0.35,
+      "name": "九阳股份"
     }
   ]
 }
